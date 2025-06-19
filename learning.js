@@ -4,6 +4,6 @@ window.alert(`this is an alert!`);
 
 
 let x; 
-x = 4; 
+x = 4;
 
 console.log(x + `4 = ` + x + 4);
