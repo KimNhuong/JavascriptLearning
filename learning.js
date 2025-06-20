@@ -1,9 +1,20 @@
-console.log(`Learning fuck through building a Webpage`);
-Document.getElementById("TrueHeading").textContent = `hello`;
-window.alert(`this is an alert!`);
+document.getElementsByClassName("nav-title")[0].addEventListener("click", function() {
+    window.alert("you're at the home page")
+});
 
+let count = 0;
 
-let x; 
-x = 4;
+document.getElementById("increment").onclick = function(){
+    count++;
+    document.getElementsByClassName("Result")[0].innerHTML = count;
+}
 
-console.log(x + `4 = ` + x + 4);
+document.getElementById("decrement").onclick = function(){
+    count--;
+    document.getElementsByClassName("Result")[0].innerHTML = count;
+}
+
+document.getElementById("reset").onclick = function(){
+    count = 0;
+    document.getElementsByClassName("Result")[0].innerHTML = count;
+}
