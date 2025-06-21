@@ -18,3 +18,25 @@ document.getElementById("reset").onclick = function(){
     count = 0;
     document.getElementsByClassName("Result")[0].innerHTML = count;
 }
+
+let items = ["dice generator", "calculator"];
+let dropdown = document.querySelector(".nav-dropdown .dropdown-list");
+let navDropdown = document.querySelector(".nav-dropdown");
+
+if (dropdown && navDropdown) {
+    navDropdown.addEventListener("mouseover", function() {
+        dropdown.innerHTML = "";
+        items.forEach(function(item) {
+            let li = document.createElement("li");
+            li.textContent = item;
+            dropdown.appendChild(li);
+        });
+        dropdown.style.display = "block";
+    });
+
+    navDropdown.addEventListener("mouseout", function() {
+        dropdown.style.display = "none";
+    });
+}
+
+ 
